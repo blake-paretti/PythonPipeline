@@ -18,4 +18,5 @@ class TestSum(unittest.TestCase):
         self.assertEqual(divide(100, 10), 10)
 
 
-TestSum()
+if __name__ == '__main__':
+    unittest.main()
