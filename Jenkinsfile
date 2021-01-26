@@ -1,14 +1,14 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:6-alpine' 
-            args '-p 8080:8080' 
-        }
-    }
+    agent { docker { image 'python:3.5.1' } }
     stages {
-        stage('Run') { 
+        stage('build') {
             steps {
-                sh 'python HelloWorld.py' 
+                sh 'python --version'
+            }
+        }
+        stage('Run'){
+            steps{
+                sh 'python HelloWorld.py'   
             }
         }
     }
