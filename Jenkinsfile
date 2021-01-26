@@ -6,9 +6,14 @@ pipeline {
                 sh 'python --version'
             }
         }
-        stage('Run'){
+        stage('Say Hello!'){
             steps{
                 sh 'python HelloWorld.py'   
+            }
+        }
+        stage('Say Goodbye!'){
+            steps{
+                sh 'python GoodbyeWorld.py'   
             }
         }
     }
