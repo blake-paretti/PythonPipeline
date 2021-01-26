@@ -11,6 +11,13 @@ pipeline {
                 sh 'python HelloWorld.py'   
             }
         }
+        
+        stage('Calculator Test'){
+            steps{
+                sh 'python Calculator.py'   
+            }
+        }
+        
         stage('Say Goodbye!'){
             steps{
                 sh 'python GoodbyeWorld.py'   
